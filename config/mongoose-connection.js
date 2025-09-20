@@ -1,8 +1,9 @@
 // require mongoose ------------------------------------------------->
 const mongoose = require('mongoose');
+const config = require('config');
 
 // mongoose connect DB ---------------------------------------------->
-mongoose.connect('mongodb://localhost:27017/scatchDB')
+mongoose.connect(`${config.get("MONGODB_URI")}/scatchDB`)
 .then(() => {
     console.log('Database connected!');
 })
