@@ -1,0 +1,13 @@
+// require modules ------------------------------------------------->
+const express = require('express');
+
+// route ----------------------------------------------------------->
+const router = express.router();
+
+// create route ---------------------------------------------------->
+router.get('/', (req, res) => {
+    res.send('hey! from products route');
+});
+
+// exports route --------------------------------------------------->
+module.exports = router;
