@@ -2,7 +2,7 @@
 const express = require('express');
 
 // route ----------------------------------------------------------->
-const router = express.router();
+const router = express.Router();
 
 // create route ---------------------------------------------------->
 router.get('/', (req, res) => {
