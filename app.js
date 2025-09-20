@@ -15,10 +15,10 @@ app.use(cookieparser());
 // set template engine --------------------------------------------->
 app.set('view engine', 'ejs');
 
-// create default route -------------------------------------------->
-app.get('/', (req, res) => {
-    res.send('hello');
-});
+// create route ---------------------------------------------------->
+app.use('/owners', ownersRoute);
+app.use('/users', usersRoute);
+app.use('/products', productsRoute);
 
 // start server ---------------------------------------------------->
 app.listen(3000, () => {
